@@ -1,0 +1,176 @@
+ <!-- 
+功能：百度知道页面 
+思路：
+    bd_nav bd_content bd_bottom 设置父盒子大小和距离相对定位
+    bd_conten_top bd_conten_bottom 设置子盒子绝对定位 
+    input button li 设置浮动和调整大小
+    a 设置字体样式
+问题：
+    页面的适应性不好，定位距离调整费劲 -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>百度知道</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            li{
+                list-style:none;
+            }
+          
+            img{
+                border:0;
+                vertical-align:middle;
+            }
+            a{
+                text-decoration:none;
+            }
+            a:hover{
+                color:#000000;
+            }
+            button{
+                cursor:pointer;
+                border:none;
+            }
+            input{
+                outline:none;
+            }
+            #bd_nav{
+                height:44px;
+            }
+            #bd_content{
+                position:relative;
+                height:200px;
+             
+            }
+            #bd_bottom{
+                position:relative;
+                height:80px;
+            }
+            #bd_nav_right{
+              float:right;
+              margin-top: 10px;
+            } 
+            #bd_nav_right ul li{
+                float:left;
+                margin-right: 10px;
+            }
+            #bd_nav_right ul li a{
+                display: block;
+                height:44px;
+                line-height: 44px;
+                font:14px;
+                color:#000000;
+                text-align:center;
+            }
+            
+            
+            #bd_content_top {
+                position:absolute;
+                top:0px;
+                left:160px;      
+            }
+            #bd_content_bottom{
+                position:absolute;
+                top:250px;
+                left:75px;  
+                
+            }
+            .text{
+                float:left;
+                width:660px;
+                height:55px;
+                border:2px solid #4e6ef2;
+                font-size:25px;
+                color:#000000;
+            }
+            .btn{
+                float:left;
+                height:55px;
+                width:164px;
+                background-color:#4e6ef2;    
+                color:#FFFFFF;
+                font-size:25px;  
+            }
+            .style_blue{
+             	background-color:#4e6ef2;   
+                color:#FFFFFF !important;
+            }
+           
+            #bd_bottom_top{
+                position:absolute;
+                top:170px;
+                left:410px; 
+            }
+            #bd_bottom_bottom{
+                position:absolute;
+                top:370px;
+                left:100px; 
+            }
+
+            #bd_bottom_bottom ul li{
+                float:left;
+                margin-right: 10px;
+            }
+            #bd_bottom_bottom ul li a{
+                display: block;
+                height:22px;
+                line-height:22px;
+                font:12px;
+                color:#000000;
+                text-align:center;
+            }
+            .style_space{
+                margin-left:200px;
+            }
+          
+        </style>
+    </head>
+    <body>
+        <div id="bd_nav">
+            <div id="bd_nav_right">
+                <ul>
+                     <li><a href="#">新闻</a></li>
+                     <li><a href="#">hao123</a></li>
+                     <li><a href="#">地图</a></a></li>
+                     <li><a href="#">贴吧</a></li>
+                     <li><a href="#">学术</a></li>
+                     <li><a href="#">登录</a></li>
+                     <li><a href="#">设置</a></li>
+                     <li  class="style_blue"><a href="#">更多产品</a></li>
+                </ul>
+            </div>
+        <div id="bd_content">
+            <div id="bd_content_top">
+                <img src="images/bd_logo.png" >
+            </div>
+            <div id="bd_content_bottom">        
+                    <input type="text" class="text" value="">
+                    <button class="btn">百度一下</button>
+            </div>
+        </div>
+        <div id="bd_bottom">
+            <div id="bd_bottom_top">
+                <img src="images/bd_erweima.png"></img>
+            </div>
+            <div id="bd_bottom_bottom">
+                <ul>
+                    <li><a href="#">把百度设为首页</a></li>
+                    <li><a href="#">关于百度</a></li>
+            	    <li><a href="#">About Baidu</a></li>
+            	    <li><a href="#">百度必读</a></li>
+                    <li><a href="#">©2021 Baidu </a></li>
+            	    <li><a href="#">使用百度前必读</a></li>
+            	    <li><a href="#">意见反馈</a></li>
+            	    <li><a href="#">京ICP证030173号</a></li>
+                    <br>
+            	    <li class="style_space"><a href="#">京公网安备11000002000001号</a></li>
+            	    <li><a href="#">京ICP证030173号</a></li> 
+                </ul>    
+            </div>     
+           
+        </div>	
+    </body>
+</html>
