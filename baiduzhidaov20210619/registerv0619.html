@@ -1,0 +1,134 @@
+<!-- 
+功能：注册页面 
+思路：按照1440*900的尺寸
+
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-3.4.1-dist/css/">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .form-control {
+            height: 50px;
+            padding-left: 36px;
+        }
+
+        .form-control-feedback {
+            line-height: 50px;
+            left: 20px;
+        }
+
+        .row {
+            margin-top: 20px;
+        }
+
+        .btn-warning {
+            height: 50px;
+            border-radius: 25px;
+        }
+
+        .btn-default {
+            height: 50px;
+            color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+        }
+        .btn-default:hover{
+            color: #fff;
+    background-color: #ec971f;
+    border-color: #d58512;
+        }
+        }
+
+    </style>
+</head>
+
+<body class="container">
+    <div class="row">
+        <div class="form-group has-feedback">
+            <div class="col-md-6 col-md-offset-3">
+
+                <!-- <label class="control-label" for="inputSuccess2">Input with success</label> -->
+                <input type="text" class="form-control" placeholder="请输入手机号码/邮箱/用户名">
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group has-feedback">
+            <div class="col-md-6 col-md-offset-3">
+
+                <!-- <label class="control-label" for="inputSuccess2">Input with success</label> -->
+                <input type="text" class="form-control" placeholder="请输入密码">
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group has-feedback">
+            <div class="col-md-6 col-md-offset-3">
+
+                <!-- <label class="control-label" for="inputSuccess2">Input with success</label> -->
+                <input type="text" class="form-control" placeholder="请确认密码">
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group has-feedback">
+            <div class="col-md-6 col-md-offset-3">
+
+                <!-- <label class="control-label" for="inputSuccess2">Input with success</label> -->
+                <input type="text" class="form-control" placeholder="请输入微信号">
+                <span class="glyphicon glyphicon-comment form-control-feedback"></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group has-feedback">
+            <div class="col-md-6 col-md-offset-3">
+
+                <!-- <label class="control-label" for="inputSuccess2">Input with success</label> -->
+                <input type="text" class="form-control" placeholder="请输入手机号">
+                <span class="glyphicon glyphicon-phone form-control-feedback"></span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="input-group has-feedback">
+                <input type="text" class="form-control" placeholder="请输入验证码">
+                <!-- <span class="glyphicon glyphicon-glass form-control-feedback"></span> -->
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">获取验证码</button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <button class="btn btn-warning btn-block" type="button">注册</button>
+        </div>
+    </div>
+
+</body>
