@@ -1,0 +1,130 @@
+<!-- 
+功能：注册页面 
+思路：按照1440*900的尺寸
+   
+问题：
+    页面的适应性不好
+-->
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            cursor: pointer;
+            outline: none;
+        }
+
+        input {
+            outline: none;
+            border: 0px;
+        }
+
+        .reg {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 50%;
+            margin-top: 100px;
+        }
+
+        .reg input {
+            display: flex;
+            width: 60%;
+            height: 44px;
+            font-size: 22px
+                /* border:solid 1px #E8E8ED; */
+        }
+
+        .btn {
+            width: 191px;
+            height: 44px;
+            border: none;
+            background-color: #FF4D4D;
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 0px 10px 10px 0px;
+        }
+
+        .over {
+            border: none;
+            background-color: #FF4D4D;
+            color: #ffffff;
+            font-size: 22px;
+            border-radius: 17px;
+            width: 40%;
+            margin: 5px 0;
+            display: block;
+            height: 44px;
+        }
+
+        .sousou {
+            width: 40%;
+            border: solid 2px #EBEBEC;
+            border-radius: 10px;
+        }
+
+        .fasong {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 40%;
+            border: solid 2px #EBEBEC;
+            border-radius: 10px;
+        }
+
+        .zhuce {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            /* width: 40%; */
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reg">
+
+        <div class="sousou">
+            <lable for="user"></lable>
+            <input type="text" id="user" placeholder="请输入手机号码/邮箱/用户名">
+        </div>
+        <div class="sousou">
+            <lable for="passwd"></lable>
+            <input type="text" id="passwd" placeholder="请输入密码">
+        </div>
+        <div class="sousou">
+            <lable for="passwdright"></lable>
+            <input type="text" id="passwdright" placeholder="请确认密码">
+        </div>
+        <div class="sousou">
+            <lable for="wechat"></lable>
+            <input type="text" id="wechat" placeholder="请输入微信号">
+        </div>
+        <div class="sousou">
+            <lable for="tel"></lable>
+            <input type="text" id="tel" placeholder="请输入手机号">
+        </div>
+        <div class="fasong">
+            <lable for="yanzheng"></lable>
+            <input type="text" id="yanzheng" placeholder="请输入验证码">
+            <button type="submit" class="btn">获取验证码</button>
+        </div>
+        <div class="zhuce">
+            <button type="submit" class="over">注册</button>
+        </div>
+
+
+    </div>
+</body>
+</html>

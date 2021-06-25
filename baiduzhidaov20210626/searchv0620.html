@@ -1,0 +1,330 @@
+<!-- 
+功能：百度知道页面 
+
+思路：flex布局+rem+媒体查询
+
+备注：
+页面适应性问题
+FAQ：以1050px为基准，分为15等份，1rem=70px，其他尺寸都改成相应的rem值。屏幕分为四档：
+    768以下：宽度为100%；
+    768~991：宽度为100%；
+    992~1050：宽度为100%；
+    1050以上：宽度为100%；
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>百度知道</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @media screen and (max-width:767px) {
+            .container {
+                width: 100%;
+
+            }
+
+            html {
+                font-size: 70px;
+            }
+        } 
+
+        @media screen and (min-width:768px) {
+            .container { 
+                width: 100%;
+
+            }
+
+            html {
+                font-size: 70px;
+            }
+        }
+
+        @media screen and (min-width:992px) {
+            .container {
+                width: 100%;
+
+            }
+
+            html {
+                font-size: 70px;
+            }
+        }
+
+        @media screen and (min-width:1050px) {
+            .container {
+                width: 100%;
+            }
+
+            html {
+                font-size: 70px;
+            }
+        }
+
+        body {
+            display: flex; 
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:link,
+        a:hover,a:visited{
+            color: #000000;
+        }
+
+        .style_white:link,
+        .style_white:hover,.style_white:visited{
+
+            color: #FFFFFF;
+        }
+
+
+        button {
+            cursor: pointer;
+            border: none;
+        }
+
+        input {
+            outline: none;
+        }
+        .bd_nav{
+  position:relative;
+ font-size:0.36rem;
+}
+ul{
+   position:absolute;
+  top:0;
+  right:0;
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+li{
+  float:left;
+  margin-left:0.7rem;
+}
+
+        /* .bd_nav {
+
+            width: 40%;
+            align-self: flex-end;
+            margin-bottom: 1.2rem;
+        } */
+
+
+        /* .bd_nav_right {
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.2rem;
+            color: #000000;
+            line-height: 0.63rem;
+            white-space: nowrap;
+           
+        } */
+        /* .bd_nav_right > div,.dibu > div,.bd_footer_bottom > div {
+            margin-left: 0.28rem;
+        } */
+
+        .bd_content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            font-size: 0.23rem;
+            align-items: center;
+            width: 50%;
+            /* height: 5.9rem; */
+        }
+
+        .logo {
+            margin-bottom: 0.2rem;
+           
+        }
+
+        .logo {
+            width: 2rem;
+            height: 1.3rem;
+        }
+
+        .search {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 0.2rem;
+            align-items: center;
+            width: 100%;
+            height: 0.63rem;
+
+        }
+
+        .text {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 0.23rem;
+            align-items: center;
+            height: 0.63rem;
+            border: solid 0.03rem #ccccccb4;
+            border-right: none;
+        }
+
+        .btn {
+            height: 0.63rem;
+            width: 1.9rem;
+            background-color: #4e6ef2;
+            color: #FFFFFF;
+            font-size: 0.25rem;
+            white-space: nowrap;
+        }
+
+        .bd_footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            font-size: 0.1rem;
+            align-items: center;
+            margin-bottom: 0.2rem;
+            width:40%;
+
+        }
+
+
+
+        .erweima {
+            display: flex;
+            margin-bottom: 0.1rem;
+        }
+
+        .zhidao {
+            text-align: center;
+            font-size: 0.23rem;
+            font-weight: bold;
+        }
+
+        .zhidao::before {
+            content: "";
+            display: block;
+            width: 0.64rem;
+            height: 0.64rem;
+            background: url(images/bd_erweima.png) no-repeat;
+            margin-bottom: 0.1rem;
+
+        }
+
+        .dibu {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+            font-size: 0.2rem;
+            height: 0.32rem;
+            line-height: 0.32rem;
+            white-space: nowrap;
+        }
+
+        .bd_footer_bottom {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+            font-size: 0.2rem;
+            height: 0.32rem;
+            line-height: 0.32rem;
+            color:#bbbbbb;
+            white-space: nowrap;
+        }
+
+        .style_blue {
+            background-color: #4e6ef2;
+        }
+      
+    </style>
+</head>
+
+<body class="container">
+    <!-- <div class="bd_nav">
+        <div class="bd_nav_right">
+            <div><a href="#">新闻</a></div>
+            <div><a href="#">hao123</a></div>
+            <div><a href="#">地图</a></a></div>
+            <div><a href="#">视频</a></div>
+            <div><a href="#">贴吧</a></div>
+            <div><a href="#">学术</a></div>
+            <div><a href="#">登录</a></div>
+            <div><a href="#">设置</a></div>
+            <div class="style_blue"><a class="style_white" href="#">更多产品</a></div>
+        </div>
+    </div> -->
+<!-- 导航栏的做法一 -->
+<div class="bd_nav">
+    <ul>
+      <li><a href="#">hao123</a><li>
+      <li><a href="#">hao123</a><li>
+      <li><a href="#">百度贴吧</a><li>
+      <li><a href="#">hao123</a><li>
+      <li><a href="#">hao123</a><li>
+      <li><a href="#">百度地图</a><li>
+     </ul>
+</div>
+</div>
+
+<!-- 导航栏的做法一结束 -->
+
+
+<!-- 导航栏的做法二 -->
+<!-- 导航栏的做法二结束 -->
+
+
+
+
+
+
+
+
+    <div class="bd_content">
+        <div class="logo">
+            <img class="logo" src="images/bd_logo.png" alt="">
+        </div>
+
+        <div class="search">
+            <input type="text" class="text" value="">
+            <button class="btn">百度一下</button>
+        </div>
+    </div>
+    <div class="bd_footer">
+        <div class="erweima">
+            <a class="zhidao">手机百度</a>
+        </div>
+        <div class="dibu">
+            <div><a href="#">把百度设为首页</a></div>
+            <div><a href="#">关于百度</a></div>
+            <div><a href="#">About Baidu</a></a></div>
+            <div><a href="#">百度必读</a></div>
+        </div>
+        <div class=banquan">
+            <div><a href="#">©2021 Baidu</a></div>
+            <div><a href="#">使用百度前必读</a></div>
+            <div><a href="#">意见反馈</a></div>
+            <div><a href="#">京ICP证030173号</a></div>
+        </div>
+    </div>
+</body>
+
+</html>

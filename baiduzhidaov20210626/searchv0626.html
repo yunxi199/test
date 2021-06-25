@@ -1,0 +1,86 @@
+<!-- 
+功能：百度知道页面 
+
+思路：rem+媒体查询
+
+分为三大模块bd_nav、bd_content、bd_footer
+
+bd_nav: 利用ul，每个li添加padding-left;
+bd_content:利用flex布局定位logo和search;search用flex定位；
+bd_footer：利用flex布局和fixed定位;
+
+备注：
+flex布局用于布局几个整体块之间的距离；
+ul、li用来布局文字块；
+整体页面布局每个模块给定固定宽度和高度，用margin和padding调整；
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>百度知道</title>
+    <link rel="stylesheet" href="css/my.css">
+
+</head>
+
+<body class="container">
+    <!-- 导航栏开始一 -->
+    <div class="bd_nav">
+        <ul>
+            <li class="style_blue"><a class="style_white" href="#">更多产品</a></li>
+            <li><a href="#">设置</a></li>
+            <li><a href="#">登录</a></li>
+            <li><a href="#">学术</a></li>
+            <li><a href="#">贴吧</a></li>
+            <li><a href="#">视频</a></li>
+            <li><a href="#">地图</a></li>
+            <li><a href="#">hao123</a></li>
+            <li><a href="#">新闻</a></li>
+        </ul>
+    </div>
+
+    <!-- 导航栏结束 -->
+
+    <!-- 内容栏目开始 -->
+    <div class="bd_content">
+        <div class="logo">
+        </div>
+
+        <div class="search">
+            <input type="text" class="text" value="">
+            <button class="btn">百度一下</button>
+        </div>
+    </div>
+    <!-- 内容栏目结束 -->
+
+    <!-- 底部信息开始 -->
+    <div class="bd_footer">
+        <div class="erweima">
+            <a class="style_bold">手机百度</a>
+        </div>
+
+
+        <div class="dibu">
+            <ul>
+                <li><a href="#">百度必读</a></li>
+                <li><a href="#">About Baidu</a></li>
+                <li><a href="#">关于百度</a></li>
+                <li><a href="#">把百度设为首页</a></li>
+            </ul>
+        </div>
+
+
+        <div class="banquan">
+            <ul>
+                <li><a href="#">京ICP证030173号</a></li>
+                <li><a href="#">意见反馈</a></li>
+                <li><a href="#">使用百度前必读</li>
+                <li><a href="#">©2021 Baidu</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 底部信息结束 -->
+</body>
+
+</html>
