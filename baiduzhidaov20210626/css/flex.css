@@ -1,0 +1,132 @@
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+  html {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  html {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    width: 100%;
+  }
+  html {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .container {
+    width: 100%;
+  }
+  html {
+    font-size: 35px;
+  }
+}
+.graph {
+  display: flex;
+  flex-direction: column;
+  max-width: 15.42857143rem;
+  min-width: 9.14285714rem;
+  margin: 0 auto;
+  border: cornflowerblue 0.02857143rem solid;
+  color: #000000;
+}
+.items {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  height: 5.71428571rem;
+  margin: 0.08571429rem 0.34285714rem;
+}
+.items_biao {
+  display: flex;
+  margin: 0rem 0.34285714rem;
+}
+.graph a:nth-child(-n+10) {
+  flex: 1;
+  background-color: pink;
+  height: 3.42857143rem;
+  text-decoration: none;
+  font-size: 0.34285714rem;
+}
+.graph .items_biao a:nth-child(1) {
+  flex-basis: 1.42857143rem;
+  background-color: pink;
+  height: 3.42857143rem;
+  order: -1;
+}
+.graph .items_biao a:nth-child(2) {
+  flex-basis: 2.28571429rem;
+  background-color: pink;
+  height: 3.42857143rem;
+  order: 0;
+}
+.graph .items_biao a:nth-child(3) {
+  flex-basis: 3.42857143rem;
+  background-color: pink;
+  height: 3.42857143rem;
+  order: 1;
+}
+.graph a[class="tupian1"] {
+  height: 2.57142857rem;
+  position: relative;
+}
+.items:nth-child(2) {
+  margin: 0.34285714rem 0.34285714rem;
+}
+.items:nth-child(4) {
+  margin: 0.34285714rem 0.34285714rem;
+}
+.tupian2,
+.tupian7,
+.tupian8,
+.tupian9,
+.tupian11,
+.tupian12 {
+  margin-right: 0.34285714rem;
+}
+.tupian5 {
+  margin: 0rem 0.34285714rem;
+}
+.circle {
+  display: inline-block;
+  background: url(../images/circle.png) no-repeat;
+  background-size: 2.57142857rem 2.57142857rem;
+  width: 2.57142857rem;
+  height: 2.57142857rem;
+  position: absolute;
+  top: 0.28571429rem;
+  left: 1.42857143rem;
+}
+h1 {
+  position: absolute;
+  top: 0.22857143rem;
+  left: 4.28571429rem;
+  font-size: 0.4rem;
+}
+.zhiye {
+  position: absolute;
+  top: 0.71428571rem;
+  left: 4.28571429rem;
+  white-space: nowrap;
+  line-height: 1.28571429rem;
+  height: 1.28571429rem;
+  display: block;
+}
+.qianming {
+  display: block;
+  position: absolute;
+  top: 1.28571429rem;
+  left: 4.28571429rem;
+  white-space: nowrap;
+  line-height: 1.28571429rem;
+  height: 1.28571429rem;
+}
